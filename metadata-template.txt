@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{identification.title}}</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.5; max-width: 52rem; margin: 3rem auto; padding: 0 1.5rem; color: #1f2937; }
+        header { border-bottom: 3px solid #2585eb; margin-bottom: 2rem; padding-bottom: 1rem; }
+        .brand { display: flex; align-items: center; gap: 0.65rem; margin-bottom: 1.25rem; color: #1e40af; font-size: 0.85rem; font-weight: bold; letter-spacing: 0.08em; text-transform: uppercase; }
+        .brand-mark { display: grid; width: 1.75rem; height: 1.75rem; place-items: center; border-radius: 0.4rem; background: #2585eb; color: #fff; font-size: 1rem; }
+        h1 { margin: 0; }
+        h2 { font-size: 1.15rem; margin: 2rem 0 0.5rem; }
+        .identifier { color: #4b5563; font-family: monospace; }
+        dl { display: grid; grid-template-columns: max-content 1fr; gap: 0.5rem 1rem; }
+        dt { font-weight: bold; }
+        dd { margin: 0; white-space: pre-wrap; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <span class="brand-mark">🌐</span>
+            <span>{{contact.organisation}}</span>
+        </div>
+        <h1>{{identification.title}}</h1>
+        <p class="identifier">{{identification.metadata-identifier}}</p>
+    </header>
+    <main>
+        <section>
+            <h2>Abstract</h2>
+            <p>{{identification.abstract}}</p>
+        </section>
+        <section>
+            <h2>Resource</h2>
+            <dl>
+                <dt>Type</dt><dd>{{identification.resource-type}}</dd>
+                <dt>Topic</dt><dd>{{identification.topic-category}}</dd>
+                <dt>Theme</dt><dd>{{identification.theme-keyword}}</dd>
+                <dt>Place</dt><dd>{{identification.place-name}}</dd>
+                <dt>Published</dt><dd>{{identification.publication-date}}</dd>
+            </dl>
+        </section>
+        <section>
+            <h2>Spatial coverage</h2>
+            <dl>
+                <dt>CRS</dt><dd>{{spatial.coordinate-reference-system}}</dd>
+                <dt>West / East</dt><dd>{{spatial.west-bound-longitude}} / {{spatial.east-bound-longitude}}</dd>
+                <dt>South / North</dt><dd>{{spatial.south-bound-latitude}} / {{spatial.north-bound-latitude}}</dd>
+            </dl>
+        </section>
+        <section>
+            <h2>Temporal coverage</h2>
+            <dl>
+                <dt>Start / End</dt><dd>{{temporal.start-date}} / {{temporal.end-date}}</dd>
+            </dl>
+        </section>
+        <section>
+            <h2>Data quality</h2>
+            <dl>
+                <dt>Horizontal accuracy</dt><dd>{{quality.horizontal-accuracy}} {{quality.accuracy-unit}}</dd>
+                <dt>Lineage</dt><dd>{{quality.lineage}}</dd>
+            </dl>
+        </section>
+        <section>
+            <h2>Contact</h2>
+            <dl>
+                <dt>Organisation</dt><dd>{{contact.organisation}}</dd>
+                <dt>Role</dt><dd>{{contact.role}}</dd>
+                <dt>Email</dt><dd>{{contact.email}}</dd>
+            </dl>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,31 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metaflux</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="index.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Metaflux</h1>
+        <p class="tagline">It's XML all the way down</p>
+        <details class="page-instructions">
+            <summary>How to use Metaflux</summary>
+            <ol>
+                <li><strong>Start with metadata.</strong> Fill in the fields on the left, or choose <strong>Load</strong> to bring in XML that follows the current source schema.</li>
+                <li><strong>Name the source file.</strong> Set the filename in the <strong>Source XML</strong> section. Metaflux adds <code>.xml</code> when needed and uses that name for XML exports.</li>
+                <li><strong>Check the form.</strong> Required and invalid fields are highlighted as you edit. The completion meter tracks filled fields.</li>
+                <li><strong>Choose an output.</strong> Select an option under <strong>Transformed XML</strong> and review the syntax-highlighted preview before downloading.</li>
+                <li><strong>Export.</strong> Use <strong>Save</strong> for the source XML, generate a transformed XML file for the selected format, or create an HTML metadata document.</li>
+            </ol>
+        </details>
+
+        <form id="metadata-form" class="form">
+        </form>
+    </div>
+</body>
+</html>
